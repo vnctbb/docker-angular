@@ -1,0 +1,12 @@
+version: "2"
+services:
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - .:/usr/app/
+      - modules:/usr/app/node_modules
+    ports:
+      - "4200:4200"
+volumes:
+  modules:
